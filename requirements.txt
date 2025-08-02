@@ -1,0 +1,7 @@
+openai
+pushbullet.py
+requests
+beautifulsoup4
+python-dotenv
+fastapi
+uvicorn
