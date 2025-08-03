@@ -31,9 +31,9 @@ graph TD
     A[User] -->|HTTP Request| B[FastAPI]
     B --> C[PortfolioAgent]
     C --> D{Gemini API}
-    D -->|Knowledge Retrieval| E[Portfolio Content]
-    D -->|Tool Calling| F[Record Details]
-    D -->|Tool Calling| G[Log Questions]
+    D -->| Knowledge Retrieval | E[Portfolio Content]
+    D -->| Tool Calling | F[Record Details]
+    D -->| Tool Calling | G[Log Questions]
     F --> H[Pushbullet]
     G --> H
     D --> I[Generate Response]
