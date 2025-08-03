@@ -28,17 +28,17 @@ Portfolio Assistant is an advanced AI agent that provides real-time portfolio da
 
 ```mermaid
 graph TD
-    A[User Query] --> B[FastAPI Server]
-    B --> C[Portfolio Assistant]
+    A[User] -->|HTTP Request| B[FastAPI]
+    B --> C[PortfolioAgent]
     C --> D{Gemini API}
-    D -->|Knowledge Retrieval| E[Portfolio Content]
-    D -->|Tool Calling| F[Record User Details]
-    D -->|Tool Calling| G[Log Unknown Questions]
-    F --> H[Pushbullet Notification]
+    D -->|Retrieve| E[Portfolio Content]
+    D -->|Call Tools| F[Record Details]
+    D -->|Call Tools| G[Log Questions]
+    F --> H[Pushbullet]
     G --> H
-    D --> I[Response Generation]
+    D --> I[Generate Response]
     I --> B
-    B --> J[User Response]
+    B -->|HTTP Response| A
 ```
 
 The system architecture consists of:
