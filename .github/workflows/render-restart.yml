@@ -1,0 +1,13 @@
+name: Nightly Render Restart
+
+on:
+  schedule:
+    - cron: '0 1 * * *'
+
+jobs:
+  redeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Render Deploy Hook
+        run: |
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
