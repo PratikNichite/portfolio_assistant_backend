@@ -1,4 +1,4 @@
-# Portfolio Assistant: Autonomous Agent for Portfolio Data Retrieval
+# Autonomous Agent for Portfolio Data Retrieval
 
 <div align="center">
   
